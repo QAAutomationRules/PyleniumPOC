@@ -1,0 +1,11 @@
+[dev-packages]
+
+[packages]
+pyleniumio = "*"
+pytest = "*"
+pytest-bdd = "*"
+pytest-html = "*"
+faker = "*"
+
+[requires]
+python_version = "3.7.5"
