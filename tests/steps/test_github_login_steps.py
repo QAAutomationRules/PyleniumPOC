@@ -29,11 +29,14 @@ def gh_given_valid_user(py):
 # When Steps
 
 @when('the user logs in to Github with a valid user')
-def gh_user_logs_in():
-   print("When")
+def gh_user_logs_in(py):
+    py.get_xpath("//input[@id='login_field']").type(user)
+    py.get_xpath("//input[@id='password']").type(password)
+    py.get_xpath("//input[@value='Sign in']").click()
+    print("When")
 
 # Then Steps
 
 @then('the user is logged into the github website')
-def gh_user_is_logged_in():
+def gh_user_is_logged_in(py):
     print("Then")
